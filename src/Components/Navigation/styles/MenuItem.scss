@@ -1,0 +1,21 @@
+
+//@layer components {
+.itemNav {
+  @apply list-none
+  text-xl font-medium    ;
+  &--active {
+    @apply
+    bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text
+  }
+
+  &--normal {
+    @apply  bg-white text-transparent bg-clip-text hover:bg-gradient-to-r from-green-400 to-blue-500 text-transparent bg-clip-text
+  }
+
+  &--other {
+    @apply text-white text-base font-medium w-full
+  }
+}
+
+
+//}

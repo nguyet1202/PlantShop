@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+//@layer components {
+.navigation {
+  @apply w-full h-24 flex;
+  &--header {
+    @apply container mx-auto flex flex-row justify-between items-center ;
+    &__listItem {
+      @apply w-full flex justify-center items-center gap-24
+    }
+    &__icon {
+      @apply cursor-pointer;
+    }
+    &__headerIcon-bar{
+      @apply lg:hidden xl:hidden 2xl:hidden;
+    }
+
+  }
+
+  &--footer {
+    &__listItem {
+      @apply w-full flex flex-col items-start gap-5;
+    }
+  }
+}
+//}
+

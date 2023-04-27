@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.plantCare {
+  @apply mb-32;
+  &__title {
+    @apply flex flex-col gap-8 ;
+    &__main {
+      @apply text-6xl font-normal leading-tight
+    }
+
+    &__Contentnavigation {
+      @apply w-full h-16  text-xl
+    }
+  }
+  &__display{
+    @apply flex flex-row gap-20  ;
+    &__sideLeft {
+      @apply w-7/12 items-start;
+
+    }
+    &__sideRight{
+      @apply pt-10;
+    }
+  }
+
+}
