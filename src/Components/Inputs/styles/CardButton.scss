@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer components {
+  .cardButton {
+    @apply
+    absolute bottom-0
+    flex flex-col justify-between items-center
+    h-48 w-full bg-[#FFFFFF]
+    drop-shadow-sm
+    rounded-3xl;
+    &__name-rateProduct {
+      @apply flex flex-col w-10/12 h-2/5 items-start gap-3 pt-5;
+      &__nameStyle {
+        @apply text-3xl
+      }
+    }
+
+    &__priceProduct {
+      @apply flex flex-row justify-between items-center w-10/12 h-20;
+      &__priceStyle {
+        @apply text-3xl;
+      }
+
+      &__iconStyle {
+        @apply w-11 h-11 flex justify-center items-center rounded-full bg-gradient-to-r from-green-400 to-blue-500
+      }
+    }
+  }
+}

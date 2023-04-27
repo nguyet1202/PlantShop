@@ -1,0 +1,17 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+.banner{
+  @apply
+  w-full h-screen relative
+  bg-[url('../../../../public/images/HomeBanner.png')] bg-cover bg-no-repeat;
+  &__textContent{
+    @apply  h-1/3 flex flex-col justify-center items-center text-white gap-5;
+    &__title{
+      @apply w-5/12 text-6xl font-bold text-center leading-snug;
+    }
+    &__description{
+      @apply w-3/12 text-xl text-center leading-normal;
+    }
+  }
+}

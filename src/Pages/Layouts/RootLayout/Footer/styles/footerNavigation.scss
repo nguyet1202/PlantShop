@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.footerNavigation{
+  @apply w-full flex flex-col gap-5;
+  &__title{
+    @apply text-white font-bold text-3xl
+  }
+}
+

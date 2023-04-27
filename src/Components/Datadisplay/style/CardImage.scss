@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.imageCard{
+  @apply w-full h-auto flex justify-center items-center relative;
+  &--primary{
+    &__title{
+      @apply absolute top-0 bottom-0 right-0 left-0 w-full h-full opacity-0 transition ease-in-out delay-150
+    }
+
+  }
+  &--xs{
+    &__image{
+      @apply w-11/12 h-5/6 opacity-100 transition ease-in-out delay-150 ;
+      &:hover{
+        @apply opacity-50
+      }
+    }
+  }
+}

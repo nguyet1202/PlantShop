@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button {
+  @apply mt-3;
+  &--xs {
+  }
+
+  &--sm {
+    @apply h-32
+  }
+
+  &--md {
+    @apply w-2/6 h-16
+  }
+
+  &--lg {
+  }
+
+  &--primary {
+    @apply flex flex-row items-center  gap-5;
+    &__icon {
+      @apply w-20 h-20 flex justify-center items-center
+    }
+
+    &__label {
+      @apply flex flex-col items-start gap-2;
+      &__title {
+        @apply  text-3xl font-black
+      }
+
+      &__description {
+        @apply font-medium text-[#828282] text-sm items-start
+      }
+    }
+  }
+  &--secondary{
+    @apply flex flex-row items-center gap-5;
+    &__label{
+      @apply w-3/5 flex flex-col text-start gap-2;
+      &__title{
+        @apply font-medium text-2xl
+      }
+      &__description{
+        @apply font-medium text-[#828282] text-xl
+      }
+    }
+  }
+
+}
