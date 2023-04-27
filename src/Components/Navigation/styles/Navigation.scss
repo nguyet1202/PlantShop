@@ -22,6 +22,9 @@
     &__listItem {
       @apply w-full flex flex-col items-start gap-5;
     }
+    &__headerIcon-bar{
+      @apply lg:hidden xl:hidden 2xl:hidden;
+    }
   }
 }
 //}
