@@ -3,12 +3,32 @@
 @tailwind utilities;
 
 .textContent {
-  @apply h-2/5 pt-10 flex flex-col justify-center items-center text-white gap-5;
+  @apply w-full h-2/5 flex flex-col justify-center items-center text-white absolute z-0 top-28
+  lg:gap-10
+  xl:gap-16
+  xxs:gap-5 ;
   &__title {
-    @apply w-5/12 text-6xl font-bold text-center leading-snug;
+    @apply font-bold text-center
+    xxs:hidden
+    xs:w-7/12 xxs:text-sm xxs:leading-snug xxs:mt-[-50px]
+    sm:block sm:text-2xl sm:mt-0
+    md:w-7/12 md:text-3xl md:leading-snug md:mt-0
+    lg:text-4xl lg:mt-10
+    xl:text-5xl
+    2xl:w-6/12 2xl:text-6xl
+    3xl:w-5/12
   }
 
-  &__description {
-    @apply w-3/12 text-2xl text-center font-light leading-normal;
+  &__button {
+    @apply mb-10
+    xxs:w-7/12 xxs:mt-[-70px]
+    xs:w-7/12 xs:mt-[-30px]
+    sm:w-5/12 sm:mt-0
+    md:w-5/12
+    lg:w-5/12
+    xl:w-3/12
+    2xl:w-3/12;
   }
 }
+
+

@@ -1,5 +1,11 @@
+import RootLayout from "../Layouts/RootLayout/RootLayout";
+
 const Shop = () => {
-   return <h1>Shop</h1>;
+   return (
+      <RootLayout>
+         {/* */}
+      </RootLayout>
+   );
 };
 
 export default Shop;

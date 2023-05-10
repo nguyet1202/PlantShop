@@ -4,5 +4,6 @@ import PlantShopService from "./PlantShopService";
 import BestSellerProduct from "./BestSellerProduct";
 import PlantCare from "./PlantCare";
 import Reference from "./Reference";
-export * from './BannerHeader';
-export {Home,PlantShopService,BestSellerProduct,Reference,PlantCare}
+import HomeMainContent from "./HomeMainContent";
+export * from './HomePageHeader';
+export {Home,HomeMainContent,PlantShopService,BestSellerProduct,Reference,PlantCare}

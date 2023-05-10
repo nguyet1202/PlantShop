@@ -3,7 +3,6 @@
 @tailwind utilities;
 
 .searchbar {
-  @apply mt-5;
   &--xs {
   }
 
@@ -11,7 +10,7 @@
   }
 
   &--md {
-    @apply w-1/5 h-16
+    @apply w-full h-auto
   }
 
   &--lg {
@@ -21,10 +20,13 @@
   &--primary {
     @apply rounded-3xl bg-gray-500 border-2 border-b-white flex flex-row justify-between items-center pl-4 pr-1.5;
     &__input{
-      @apply w-11/12 h-14 bg-inherit focus:outline-none
+      @apply w-11/12 bg-inherit focus:outline-none md:py-4 xxs:py-3
     }
     &__icon {
-      @apply w-12 h-12 flex justify-center items-center rounded-full bg-gradient-to-r from-green-400 to-blue-500
+      @apply flex justify-center items-center rounded-full bg-gradient-to-r from-green-400 to-blue-500
+      xxs:w-10 xxs:h-8
+      md:w-12 md:h-11
+
     }
   }
   &--secondary {

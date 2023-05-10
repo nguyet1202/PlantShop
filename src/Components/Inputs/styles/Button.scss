@@ -27,23 +27,32 @@
     &__label {
       @apply flex flex-col items-start gap-2;
       &__title {
-        @apply  text-3xl font-black
+        @apply text-3xl font-black
       }
 
       &__description {
         @apply font-medium text-[#828282] text-sm items-start
+
       }
     }
   }
-  &--secondary{
+
+  &--secondary {
     @apply flex flex-row items-center gap-5;
-    &__label{
-      @apply w-3/5 flex flex-col text-start gap-2;
-      &__title{
-        @apply font-medium text-2xl
+    &__label {
+      @apply w-3/5 flex flex-col text-start
+      xxs:gap-2
+      lg:gap-2;
+      &__title {
+        @apply font-medium
+        xxs:text-xl
+        lg:text-2xl
       }
-      &__description{
+
+      &__description {
         @apply font-medium text-[#828282] text-xl
+        xxs:text-xs
+        lg:text-sm
       }
     }
   }

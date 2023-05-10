@@ -4,17 +4,19 @@ module.exports = {
     ],
     theme: {
         screens: {
-            'sm': {'min': '640px', 'max': '767px'},
-
-            'md': {'min': '768px', 'max': '1023px'},
-
-            'lg': {'min': '1024px', 'max': '1279px'},
-
-            'xl': {'min': '1280px', 'max': '1535px'},
-
-            '2xl': {'min': '1536px'},
+            'xxs': {'min': '280px'},
+            'xs': {'min': '320px'},
+            'sm': {'min': '510px'},
+            'md': {'min': '710px'},
+            'lg': {'min': '960px'},
+            'xl': {'min': '1200px'},
+            '2xl': {'min': '1436px'},
+            '3xl': {'min': '1600px'},
+            '4xl': {'min': '1800px'}
         },
-        extend: {},
+        extend: {
+
+        },
     },
     plugins: [],
 

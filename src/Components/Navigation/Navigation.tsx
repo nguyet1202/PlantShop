@@ -1,9 +1,6 @@
-import React, {ReactElement} from 'react';
-import Container from '@mui/material/Container';
-import {RouteConfig} from '../../Types';
+import React, {ReactElement, useState} from 'react';
 import {MenuItem, MenuItemProps} from "./index";
-import CartIcon from "./CartIcon";
-import "./styles/main.scss";
+import "./styles/Navigation.scss";
 import {IconType} from "react-icons/lib";
 import {FiAlignLeft} from "react-icons/fi";
 
@@ -14,24 +11,29 @@ interface NavigationProps {
 }
 
 const Navigation = ({menuItems, icon, theme}: NavigationProps) => {
+   const [open, setOpen] = useState(false);
    return (
-      <nav className={`navigation`}>
-         <div className={`navigation navigation--${theme}`}>
-            <ul className={`navigation--${theme}__listItem`}>
-               {menuItems.map((menuItem, index) => (
-                  <MenuItem key={index} {...menuItem} />
-               ))}
-            </ul>
-            <ul>
-               <FiAlignLeft size={40} color="white" className={`navigation--${theme}__headerIcon-bar`}/>
-            </ul>
-            {icon &&
-                <ul>
-                   {icon}
-                </ul>
-            }
+      <div className={`navigation`}>
+         <div className={`navigation--${theme}`}>
+            <div className={`navigation--${theme}__main`}>
+               <div className=' cursor-pointer flex items-center'>
+                  <FiAlignLeft onClick={() => setOpen(!open)} size={40} color="white"
+                               className={`navigation--${theme}__headerIcon-bar`}/>
+               </div>
+               <nav>
+                  <div>
+                     <ul
+                        className={` navigation--${theme}__listItem navigation--${theme}__listItem__${open ? 'open' : 'close'} `}>
+                        {menuItems.map((menuItem, index) => (
+                           <MenuItem key={index} {...menuItem} />
+                        ))}
+                     </ul>
+                  </div>
+               </nav>
+            </div>
          </div>
-      </nav>
+      </div>
+
    );
 };
 export {type NavigationProps}

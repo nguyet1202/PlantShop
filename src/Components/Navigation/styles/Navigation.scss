@@ -2,28 +2,54 @@
 @tailwind components;
 @tailwind utilities;
 //@layer components {
+.navigation1{
+}
 .navigation {
-  @apply w-full h-24 flex;
+  @apply w-full ;
   &--header {
-    @apply container mx-auto flex flex-row justify-between items-center ;
-    &__listItem {
-      @apply w-full flex justify-center items-center gap-24
+    @apply px-12  flex flex-row lg:justify-center
+    xs:w-full
+    sm:px-8
+    md:px-20
+    xl:px-20
+    2xl:px-20
+    xs:items-start;
+
+    &__main{
+      @apply w-full container mx-auto
+      md:mt-2 ;
     }
+    &__listItem {
+      @apply w-full flex absolute  ;
+      @screen xs {
+        @apply flex-col gap-5 static z-auto right-0 w-auto pr-0 transition-all duration-500 ease-in;
+      }
+      @screen  lg {
+        @apply flex-row justify-center items-center gap-16 lg:gap-24 xl:gap-32 3xl:gap-48;
+      }
+      &__open {
+        @apply xs:top-20;
+      }
+      &__close{
+        @apply xxs:hidden lg:flex ;
+      }
+    }
+
     &__icon {
       @apply cursor-pointer;
     }
     &__headerIcon-bar{
-      @apply lg:hidden xl:hidden 2xl:hidden;
+      @apply  xl:hidden 2xl:hidden lg:hidden;
     }
 
   }
-
   &--footer {
+    @apply static;
     &__listItem {
-      @apply w-full flex flex-col items-start gap-5;
+      @apply w-full flex flex-col items-start gap-5 ;
     }
     &__headerIcon-bar{
-      @apply lg:hidden xl:hidden 2xl:hidden;
+      @apply hidden;
     }
   }
 }

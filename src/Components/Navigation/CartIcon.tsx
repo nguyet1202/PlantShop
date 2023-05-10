@@ -1,12 +1,12 @@
-import React from 'react';
-interface IconProps {
-   imageIcon: string
+import * as React from "react";
+
+interface CartIconProps {
+   icon: string
 }
 
-const cartIcon = (props: IconProps) => {
+const CartIcon = (props: CartIconProps) => {
    return (
-      <img src={props.imageIcon} alt="Cart icon"/>
-   );
-};
-
-export default cartIcon;
+      <img className="cursor-pointer text-black" src={props.icon} alt="Cart icon"/>
+   )
+}
+export default CartIcon

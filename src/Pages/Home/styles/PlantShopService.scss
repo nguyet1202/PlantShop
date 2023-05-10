@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .service{
-  @apply flex flex-row justify-between items-center pt-28 pb-32 ;
+  @apply flex lg:flex-row xxs:flex-col justify-between items-center lg:pt-28 lg:pb-32 xxs:pt-10 ;
 }

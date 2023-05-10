@@ -1,16 +1,26 @@
 import * as React from "react";
 import {Navigation, NavigationProps} from "../../../Components";
-import { BsCartFill } from "react-icons/bs";
+import {CartIcon} from "../../../Components";
+
+interface MainNavigationProps {
+   icon: string
+}
 
 const menuItems: NavigationProps["menuItems"] = [
-   { label: 'Home', link: "/", style:"active" },
-   { label: 'Shop', link: "/Shop", style:"normal" },
-   { label: 'Contact Us', link: "/contact", style:"normal" },
-   { label: 'About Us', link: "/aboutus", style:"normal" },
+   {label: 'Home', link: "/", style: "active"},
+   {label: 'Shop', link: "/Shop", style: "normal"},
+   {label: 'Contact Us', link: "/contact", style: "normal"},
+   {label: 'About Us', link: "/aboutus", style: "normal"},
 ];
-const MainNavigation = () => {
+const MainNavigation = (props: MainNavigationProps) => {
    return (
-      <Navigation  theme="header" menuItems={menuItems} icon={<img className="cursor-pointer text-white " src="./images/icons/cartIcon.png" alt="Cart icon"/>} />
+      <section className={`w-full container mx-auto flex flex-row justify-around absolute top-5 left-0 z-10`}>
+         <Navigation
+            theme="header"
+            menuItems={menuItems}
+         />
+         <CartIcon icon={props.icon}/>
+      </section>
    );
 }
 export default MainNavigation

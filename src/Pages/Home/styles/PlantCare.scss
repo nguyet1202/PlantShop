@@ -15,10 +15,10 @@
     }
   }
   &__display{
-    @apply flex flex-row gap-20  ;
+    @apply flex xl:flex-row gap-20
+    xxs:flex-col xxs:w-full;
     &__sideLeft {
-      @apply w-7/12 items-start;
-
+      @apply xl:w-7/12 items-start;
     }
     &__sideRight{
       @apply pt-10;
